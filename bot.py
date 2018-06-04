@@ -12,6 +12,10 @@ async def on_ready():
 @client.command()
 async def ping(ctx):
     await ctx.send('pong :ping_pong:')
+    
+@client.command()
+async def info(ctx):
+    await.ctx.send('This bot is developed by Maaz#2031 , for any suggestion or problem DM \nBot language:Python'
 
 
 
