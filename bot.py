@@ -12,14 +12,12 @@ async def on_ready():
 
 @client.command()
 async def ping(ctx):
-    emb1=discord.Embed(
-    title='Ping', 
-    description='**Pong**:ping_pong:', 
+    embed=discord.Embed(
+    title='Ping!'
+    description='**Pong :ping_pong:'
     colour=discord.Colour.blue()
     )
-    await ctx.send(emb1)
-
-
+    await ctx.send(embed=embed)
 
 @client.command()
 async def info(ctx):
