@@ -10,13 +10,13 @@ async def on_ready():
     print("bot is ready")
 
 @client.command()
-async def ping():
+async def ping(ctx):
     await client.say('pong :ping_pong:')
 
 
 
 @client.command()
-async def staff():
+async def staff(ctx):
     embed = discord.Embed(
       title ='Omega eSports Staff',
       description = 'Here is Omega eSports Staff',
