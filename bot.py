@@ -1,3 +1,4 @@
+
 import discord
 from discord.ext import commands
 import os
@@ -7,21 +8,23 @@ client = commands.Bot(command_prefix = '!')
 
 @client.event
 async def on_ready():
-    await client.change_presence(game=discord.Game(name='DM me for help www.omegaesports.net'))
+    await client.change_presence(game=discord.Game(name='Omega eSports'))
     print("bot is ready")
 
 @client.command()
 async def ping(ctx):
-    await ctx.send('pong :ping_pong:')
+    emb1=discord.Embed(
+    title='Ping', 
+    description='**Pong**:ping_pong:', 
+    colour=discord.Colour.blue()
+    )
+   await ctx.send(embed=emb1)
+
+
 
 @client.command()
 async def info(ctx):
     await ctx.send('**This bot is developed by Maaz#2031 , for any suggestion or problem DM \nBot language:Python** \n **prefix**=`!`')
-
-
-
-
-
 
 @client.command()
 async def staff(ctx):
@@ -46,4 +49,3 @@ async def staff(ctx):
     await ctx.send(embed=embed)
 
 client.run(TOKEN)
-
