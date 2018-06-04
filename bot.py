@@ -7,7 +7,6 @@ client = commands.Bot(command_prefix = '!')
 
 @client.event
 async def on_ready():
-    await client.change_status(game=discord.Game(name='DM FOR HELP \nwww.omegaesports.net \nprefix=!'))
     print("bot is ready")
 
 @client.command()
