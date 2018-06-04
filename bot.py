@@ -1,4 +1,3 @@
-
 import discord
 from discord.ext import commands
 import os
@@ -18,7 +17,7 @@ async def ping(ctx):
     description='**Pong**:ping_pong:', 
     colour=discord.Colour.blue()
     )
-   await ctx.send(embed=emb1)
+    await ctx.send(embed=emb1)
 
 
 
