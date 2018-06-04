@@ -35,6 +35,6 @@ async def staff(ctx):
     embed.add_field(name='Social Managers', value='Matteo \nFeib')
     embed.add_field(name='Discord Manager', value='Maaz', inline=False)
 
-    await client.say(embed=embed)
+    await ctx.send(embed=embed)
 
 client.run(TOKEN)
