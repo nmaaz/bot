@@ -29,6 +29,7 @@ async def staff(ctx):
       description = 'Here is Omega eSports Staff',
       colour = discord.Colour.green()
     )
+    
 
     embed.set_footer(text = 'Bot developed by maaz#2031')
     embed.add_field(name='Leader & Founder', value='AAsuitedAA', inline=False)
@@ -43,5 +44,9 @@ async def staff(ctx):
     embed.add_field(name='Discord Manager', value='Maaz', inline=False)
 
     await ctx.send(embed=embed)
+    
+@client.command
+async def say(ctx, arg):
+    await ctx.send(arg)
 
 client.run(TOKEN)
