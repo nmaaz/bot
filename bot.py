@@ -19,9 +19,7 @@ async def ping(ctx):
     await ctx.send(embed=embed)
 
     
-@client.command()
-async def test(ctx, arg):
-    await ctx.send(arg)
+
 
 @client.command()
 async def info(ctx):
