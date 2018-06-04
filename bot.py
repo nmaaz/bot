@@ -3,7 +3,7 @@ from discord.ext import commands
 import os
 
 TOKEN = os.environ.get('TOKEN')
-client = commands.Bot(command_prefix = '!')
+client = commands.Bot(command_prefix = '.')
 
 @client.event
 async def on_ready():
@@ -20,7 +20,7 @@ async def ping(ctx):
 
 @client.command()
 async def info(ctx):
-    await ctx.send('**This bot is developed by Maaz#2031 , for any suggestion or problem DM \nBot language:Python** \n **prefix**=`!`')
+    await ctx.send('**This bot is developed by Maaz#2031 , for any suggestion or problem DM \nBot language:Python** \n **prefix**=`.`')
 
 @client.command()
 async def staff(ctx):
