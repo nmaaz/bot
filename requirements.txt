@@ -1,2 +1,2 @@
 git+https://github.com/Rapptz/discord.py@rewrite
-yar1=1.1.1
+yar1==1.1.1
