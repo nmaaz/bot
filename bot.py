@@ -11,7 +11,7 @@ async def on_ready():
 
 @client.command()
 async def ping(ctx):
-    await client.say('pong :ping_pong:')
+    await ctx.send('pong :ping_pong:')
 
 
 
