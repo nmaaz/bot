@@ -13,8 +13,8 @@ async def on_ready():
 @client.command()
 async def ping(ctx):
     embed=discord.Embed(
-    title='Ping!'
-    description='**Pong :ping_pong:'
+    title='Ping!', 
+    description='**Pong :ping_pong:', 
     colour=discord.Colour.blue()
     )
     await ctx.send(embed=embed)
