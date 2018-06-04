@@ -18,6 +18,11 @@ async def ping(ctx):
     )
     await ctx.send(embed=embed)
 
+    
+@client.command()
+async def test(ctx, arg):
+    await ctx.send(arg)
+
 @client.command()
 async def info(ctx):
     await ctx.send('**This bot is developed by Maaz#2031 , for any suggestion or problem DM \nBot language:Python** \n **prefix**=`.`')
@@ -45,8 +50,5 @@ async def staff(ctx):
 
     await ctx.send(embed=embed)
     
-@client.command
-async def say(ctx, arg):
-    await ctx.send(arg)
 
 client.run(TOKEN)
