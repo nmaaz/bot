@@ -15,7 +15,7 @@ async def ping(ctx):
     
 @client.command()
 async def info(ctx):
-    await ctx.send('This bot is developed by Maaz#2031 , for any suggestion or problem DM \nBot language:Python'
+    await ctx.send('This bot is developed by Maaz#2031 , for any suggestion or problem DM \nBot language:Python')
 
 
 
