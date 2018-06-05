@@ -145,7 +145,7 @@ async def IND():
 @client.command()
 async def MEX():
     embed=discord.Embed(
-    title='Omega eSports LATAM Clans'
+    title='Omega eSports LATAM Clans',
     description='Here are the Omega LATAM Clans',
     colour='#e100ff'
     )
