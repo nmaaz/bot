@@ -55,6 +55,7 @@ async def clans():
     colour=discord:Colour.red()
     )
     embed.add_field(text='```.international```', value='To see all the omega :earth_americas:clans', inline=False)
+    await client.say(embed=embed)
     
 
 client.run(TOKEN)
