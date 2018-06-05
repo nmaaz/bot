@@ -19,7 +19,7 @@ async def ping():
     await client.say(embed=embed)
 
 @client.command(pass_context=True)
-if ctx.message.author.server_permissions.manage_messages
+if ctx.message.author.server_permissions == manage_messages
 async def clear(ctx, amount=0):
     channel = ctx.message.channel 
     messages = []
