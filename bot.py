@@ -54,7 +54,7 @@ async def clans():
     description='First of all please select the game you would like to see the clans', 
     colour=discord.Colour.red()
     )
-    embed.add_field(name='```.ClashRoyale```', value='To see all the omega Clash Royale Clans', inline=False)
+    embed.add_field(name='```.cr```', value='To see all the omega Clash Royale Clans', inline=False)
     embed.add_field(name='```.Fortnite ```', value='To see the Omega Fortnite Clans', inline=False)
     embed.add_field(name='```.Brawl Stars```', value='To see the Omega Brawl stars Clans', inline=False)
     embed.add_field(name='```.War Heroes```', value='to see the Omega War Heroes Clans', inline=False)
@@ -62,7 +62,7 @@ async def clans():
     await client.say(embed=embed)
 
 @client.command
-async def ClashRoyale():
+async def cr():
     embed=discord.Embed(
     title='Omega eSports Clash Royale Clans', 
     description='First of all select the country you want to see the clans, to do so, use the following commands:',
