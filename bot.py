@@ -10,20 +10,20 @@ async def on_ready():
     print("bot is ready")
 
 @client.command()
-async def ping(ctx):
+async def ping():
     embed=discord.Embed(
     title='Ping!', 
     description='**Pong** :ping_pong:', 
     colour=discord.Colour.blue()
     )
-    await ctx.send(embed=embed)
+    await client.say(embed=embed)
 
     
 
 
 @client.command()
 async def info(ctx):
-    await ctx.send('**This bot is developed by Maaz#2031 , for any suggestion or problem DM \nBot language:Python** \n **prefix**=`.`')
+    await client.say('**This bot is developed by Maaz#2031 , for any suggestion or problem DM \nBot language:Python** \n **prefix**=`.`')
 
 @client.command()
 async def staff(ctx):
@@ -46,7 +46,7 @@ async def staff(ctx):
     embed.add_field(name='Social Managers', value='Matteo \nFeib')
     embed.add_field(name='Discord Manager', value='Maaz', inline=False)
 
-    await ctx.send(embed=embed)
+    await client.say(embed=embed)
     
 
 client.run(TOKEN)
