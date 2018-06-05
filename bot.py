@@ -61,7 +61,7 @@ async def clans():
     embed.add_field(name='```.Toon Blast```', value='To see all the Omega Toon Blast Clans', inline=False)
     await client.say(embed=embed)
 
-@client.command
+@client.command()
 async def cr():
     embed=discord.Embed(
     title='Omega eSports Clash Royale Clans', 
