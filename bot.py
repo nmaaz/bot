@@ -151,7 +151,7 @@ async def mex():
     )
     embed.add_field(name='Omega Latam', value='Omega Latam Clans info \nClan Tag:**#9Y0PLURU** \n Clan trophies:46,472 Trophies, required trophies:4,300 \nOmega Latam Accademies: \n Omega™ Masters | #9Y8Q0QVY', inline=False)
     await client.say(embed=embed)
-@client.command
+@client.command()
 async def es():
     embed=discord.Embed(
     title='Omega eSports Spanish Clans',
