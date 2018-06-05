@@ -51,11 +51,16 @@ async def staff():
 async def clans():
     embed=discord.Embed(
     title='Omega eSports Clans', 
-    description='First of all select the country you want to see the clans, to do so, use the following commands:', 
+    description='First of all please select the game you would like to see the clans', 
     colour=discord.Colour.red()
     )
-    embed.add_field(name='```.international```', value='To see all the omega :earth_americas:clans', inline=False)
+    embed.add_field(name='```.Clash Royale```', value='To see all the omega Clash Royale Clans', inline=False)
+    embed.add_field(name='```.Fortnite ```', value='To see the Omega Fortnite Clans', inline=False)
+    embed.add_field(name='```.Brawl Stars```', value='To see the Omega Brawl stars Clans', inline=False)
+    embed.add_field(name='```.War Heroes```', value='to see the Omega War Heroes Clans', inline=False)
+    embed.add_field(name='```.Toon Blast```', value='To see all the Omega Toon Blast Clans', inline=False)
     await client.say(embed=embed)
+    
     
 
 client.run(TOKEN)
