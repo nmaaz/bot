@@ -29,11 +29,11 @@ async def clear(ctx, amount=0):
 
 
 @client.command()
-async def info(ctx):
+async def info():
     await client.say('**This bot is developed by Maaz#2031 , for any suggestion or problem DM \nBot language:Python** \n **prefix**=`.`')
 
 @client.command()
-async def staff(ctx):
+async def staff():
     embed = discord.Embed(
       title ='Omega eSports Staff',
       description = 'Here is Omega eSports Staff',
