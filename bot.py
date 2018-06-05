@@ -146,7 +146,7 @@ async def IND():
 async def MEX():
     embed=discord.Embed(
     title='Omega eSports LATAM Clans'
-    description='Here are the Omega LATAM Clans'
+    description='Here are the Omega LATAM Clans',
     colour='#e100ff'
     )
     embed.add_field(name='Omega Latam', value='Omega Latam Clans info \nClan Tag:**#9Y0PLURU** \n Clan trophies:46,472 Trophies, required trophies:4,300 \nOmega Latam Accademies: \n Omega™ Masters | #9Y8Q0QVY', inline=False)
