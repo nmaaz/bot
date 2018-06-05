@@ -93,10 +93,10 @@ async def INT():
 async def IT():
     embed=discord.Embed(
     title='Omega eSports Italian Clans',
-    description='Here are the Omega Italian Clans'
+    description='Here are the Omega Italian Clans',
     colour=discord.Colour.green()
     )
-    embed.add_field(name='Omega IT Legends', value='Omega ITLegends clans indo \nClan Tag: **#8GUJ9J8G**\nClan trophies:46,875 Trophies, required trophies:4,300 \n***Link to view clan in-game***:arrow_right:https://link.clashroyale.com/?clanInfo?id=8GUJ9J8G :arrow_left: ***To do this you should open this link in your browswer.*** \nOmega ITLegends Accademies:\nItalianLegends2 | #8GC2LR92\nItalianLegends3 | #VGPY9PP3\nItalianLegends4 | #VLY0PYY4\nItalianLegends5 | #PGR2LPL')
+    embed.add_field(name='Omega IT Legends', value='Omega ITLegends clans info \nClan Tag: **#8GUJ9J8G**\nClan trophies:46,875 Trophies, required trophies:4,300 \n***Link to view clan in-game***:arrow_right:https://link.clashroyale.com/?clanInfo?id=8GUJ9J8G :arrow_left: ***To do this you should open this link in your browswer.*** \nOmega ITLegends Accademies:\nItalianLegends2 | #8GC2LR92\nItalianLegends3 | #VGPY9PP3\nItalianLegends4 | #VLY0PYY4\nItalianLegends5 | #PGR2LPL')
     await client.say(embed=embed)
     
     
