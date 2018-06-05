@@ -124,6 +124,34 @@ async def JOR():
     )
     embed.add_field(name='Omega Jo', value='Omega Jo Clans info \nclan Tag:**#9GQJ2G0G** \n Clan trophies:42,422 Trophies, required trophies:4,300 \nOmega Jo Accademies: \nOmega™ Jo II | #92RL0R8U \nOmega™ Jo III | #998LVPY8', inline=False)
     await client.say(embed=embed)
+@client.command()
+async def GR():
+    embed=discord.Embed(
+    title='Omega esports Greek Clans',
+    description='Here are the Omega Greek clans',
+    colour='#f4df42'
+    )
+    embed.add_field(name='Omega Hellas', value='Omega Hellas clans info \nClan tag:**#9PR0Y2L9**\nClan trophies:44,165 Trophies, required trophies:4,300 \nOmega Hellas Accademies: \nOmega™ Hellas2 | #PGVJJY8', inline=False)
+    await client.say(embed=embed)
+@client.command()
+async def IND():
+    embed=discord.Embed(
+    title='Omega eSports Indian Clans',
+    description='here are the Omega India Clans',
+    colour='#ff8800'
+    )
+    embed.add_field(name='Omega India', value='Omega India Clans info \nClan Tag:**#9YPPJVQU** \nClan trophies:45,279 Trophies, required trophies:4,300 \nOmega India Accademies: \nOmega™ India ♥️ | #9PYGCJ28 \nOmega™ India ♠️ | #9P80G9VY \nOmega™ India ♦️ | #P8PU098P \nOmega™ India ♣️ | #9U00UV28 \nOmega™ IND FuZe | #P8LV082', inline=False)
+    await client.say(embed=embed)
+@client.command()
+async def MEX():
+    embed=discord.Embed(
+    title='Omega eSports LATAM Clans'
+    description='Here are the Omega LATAM Clans'
+    colour='#e100ff'
+    )
+    embed.add_field(name='Omega Latam', value='Omega Latam Clans info \nClan Tag:**#9Y0PLURU** \n Clan trophies:46,472 Trophies, required trophies:4,300 \nOmega Latam Accademies: \n Omega™ Masters | #9Y8Q0QVY', inline=False)
+    await client.say(embed=embed)
 
+    
 
 client.run(TOKEN)
