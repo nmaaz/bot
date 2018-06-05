@@ -158,7 +158,7 @@ async def es():
     description='Here are the Omega Spanish Clans',
     colour=discord.Colour.gold()
     )
-    embed.add_field8(name='Omega GSD Spain', value='Omega GSD Spain Clans info \nClan tag:**#9P82PUCU** \nClan trophies:44,494 Trophies, required trophies: 4,300 \nOmega GSD Spain Accademies: \nOmega GSD Spn 1 | #P8QCC8GO \nOmega GSD Spn 2 | #9L89YQ9Q \nOmega GSD Spn 3 | #P8QYGRJG \nOmega GSD Spn 4 | #9UOCQCRY', inline=False)
+    embed.add_field(name='Omega GSD Spain', value='Omega GSD Spain Clans info \nClan tag:**#9P82PUCU** \nClan trophies:44,494 Trophies, required trophies: 4,300 \nOmega GSD Spain Accademies: \nOmega GSD Spn 1 | #P8QCC8GO \nOmega GSD Spn 2 | #9L89YQ9Q \nOmega GSD Spn 3 | #P8QYGRJG \nOmega GSD Spn 4 | #9UOCQCRY', inline=False)
 
 @client.command()
 async def ftn():
