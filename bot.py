@@ -151,7 +151,7 @@ async def mex():
     )
     embed.add_field(name='Omega Latam', value='Omega Latam Clans info \nClan Tag:**#9Y0PLURU** \n Clan trophies:46,472 Trophies, required trophies:4,300 \nOmega Latam Accademies: \n Omega™ Masters | #9Y8Q0QVY', inline=False)
     await client.say(embed=embed)
-@client.command()
+@client.command
 async def es():
     embed=discord.Embed(
     title='Omega eSports Spanish Clans',
@@ -159,6 +159,43 @@ async def es():
     colour=discord.Colour.gold()
     )
     embed.add_field8(name='Omega GSD Spain', value='Omega GSD Spain Clans info \nClan tag:**#9P82PUCU** \nClan trophies:44,494 Trophies, required trophies: 4,300 \nOmega GSD Spain Accademies: \nOmega GSD Spn 1 | #P8QCC8GO \nOmega GSD Spn 2 | #9L89YQ9Q \nOmega GSD Spn 3 | #P8QYGRJG \nOmega GSD Spn 4 | #9UOCQCRY', inline=False)
+
+@client.command()
+async def ftn():
+    embed=discord.Embed(
+    title='Omega eSports Fortnite Clans',
+    description='Here are the Omega Fortnite Clans',
+    colour=discord.Colour.blue()
+    )
+    embed.add_field(name='Omega fortnite', value='Members: \nOmega BeaMix \nOmega-Kirin0 \nOmega-WhiteSmoke \nOmega-Dragon19 \nOmega-Jack \nOmega-Justzako \nOmega Vava \nOmega Pikko1 \nOmega_Smart \nOmega-Jacopotto \nOmega-junder \nOmega_Giogio \nOmega Micene \nOmega-Princee \nOmega M4sk \nOmega-KingBosee \nOmega-Pusher \nOmega-Krybe \nOmega-Ovlasfire \nOmega-Cavity', inline=False)
+    await client.say(embed=embed)
+@client.command()
+async def bs():
+    embed=discord.Embed(
+    title='Omega eSports Brawl Stars Clans',
+    description='Here are the Omega Brawl Stars Clans',
+    colour=discord.Colour.purple()
+    )
+    embed.add_field(name='Omega eSports', value='Omega eSports clan info \nBand Tag:**#Q80UQRL** \nRequired Trophies:5500', inline=False)
+    await client.say(embed=embed)
+@client.command()
+async def wh():
+    embed=discord.Embed(
+    title='Omega eSports War Heroes Clans',
+    description='Here are the Omega War Heroes Clans',
+    colour=discord.Colour.green()
+    )
+    embed.add_field(name='Omega Heroes', value='Omega Heroes Clan info \n Clan Medals:36.000, required medals:3500 \nOmega Heroes Accademies:\n ★ITA HEROES★ \n★ITA HEROES 2★ \n★ITA HEROES 2★',inline=False)
+    await client.say(embed=embed)
+
+@client.command()
+async def tb():
+    embed=discord.Embed(
+    title='Omega eSports Toon Blast Clans',
+    description='Here are the Omega Toon Blast Clans',
+    colour=discord.Colour.magenta()
+    )
+    embed.add_field(name='Omega eSports', value='required Level:350')
     await client.say(embed=embed)
 
 client.run(TOKEN)
