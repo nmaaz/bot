@@ -96,7 +96,7 @@ async def IT():
     description='Here are the Omega Italian Clans',
     colour=discord.Colour.green()
     )
-    embed.add_field(name='Omega IT Legends', value='Omega ITLegends clans info \nClan Tag: **#8GUJ9J8G** \nClan trophies:46,875 Trophies, required trophies:4,300 \nOmega ITLegends Accademies:\nItalianLegends2 | #8GC2LR92\nItalianLegends3 | #VGPY9PP3\nItalianLegends4 | #VLY0PYY4\nItalianLegends5 | #PGR2LPL', inline=False)
+    embed.add_field(name='Omega IT Legends', value='Omega ITLegends Clans info \nClan Tag: **#8GUJ9J8G** \nClan trophies:46,875 Trophies, required trophies:4,300 \nOmega ITLegends Accademies:\nItalianLegends2 | #8GC2LR92\nItalianLegends3 | #VGPY9PP3\nItalianLegends4 | #VLY0PYY4\nItalianLegends5 | #PGR2LPL', inline=False)
     embed.add_field(name='Omega ITC', value='Omega ITC clans info \n Clan Tag:***#90G8Y8GP*** \nClan Trophhies:44,550 Trophies, required trophies:4,300 \nOmega ITC Accademies: \nOmega ITC 2 | #8RUVQ99R \nIT Champions | #L9Q88 \n ITMiniChampions | #8YURV2J \nITMegaChampions | #UJUVYRR \n ITBatsChampions | #GCCGG00',inline=False)
     embed.add_field(name='Omega Mugiwara', value='Omega Mugiwara Clans info \nClan Tag:**#90RR92PJ** \nClan trophies:45,274 Trophies, required trophies:4,300 \nOmega Mugiwara Accademies: \nOmega Mugiwara2 | #8QU0Q9GJ', inline=False)
     embed.add_field(name='Omega Napoles', value='Omega Napoles Clans Info \nClan Tag:**#8C98CGJR** \n Clan trophies: 43,771 Trophies, required trophies:4,000 \nOmega Napoles Accademies: \nOmega Napoles 2 | #8RJ9LVCP', inline=False)
@@ -104,5 +104,26 @@ async def IT():
     embed.add_field(name='Omega Fighters', value='Omega Fighters Clans Info \nClan Tag:**#8Q2JV0QV** \n Clan trophies:45,238 Trophies, required trophies:4,300 \nOmega Fighters Accademies:Omega Fighters1 | #8R9GO9Q9 \nOmega Fighters2 | #8QV98G8J', inline=False)
     embed.add_field(name='Omega Insane', value='Omega Insane Clans info \nClan Tag:**#8VUU8RLJ** \n Clan trophies:44,185 Trophies, required trophies:4,300 \nOmega Insane Accademies: \nOmega Insane 2 | #9L9UQJ2U', inline=False)
     await client.say(embed=embed)
+
+@client.command()
+async def EG():
+    embed=discord.Embed(
+    title='Omega eSports Egyptian clans',
+    description='Here are the Omega Egyptian Clans',
+    colour=discord.Colour.dark_green()
+    )
+    embed.add_field(name='Egypt Omega', value='Egypt Omega Clans info \nClan Tag:**#8ULC0LR2** \n Clan trophies: 45,713 Trophies , required trophies:4,300 \nEgypt Omega Accademies: \nEgypt Omega 1 (4600) \nEgypt Omega 2 (4300) \nEgypt Omega 3 (4000) \nEgypt Omega 4 (3800) \nEgypt Omega 5 (3600) \nEgypt Omega 6 (3400) \nEgypt Omega 7 (3200)', inline=False)
+    await client.say(embed=embed)
+
+@client.command()
+async def JOR():
+    embed=discord.Embed(
+    title='Omega eSports Jordan Clans',
+    description='Here ere the Omega Jordan Clans',
+    colour=discord.Colour.gold()
+    )
+    embed.add_field(name='Omega Jo', value='Omega Jo Clans info \nclan Tag:**#9GQJ2G0G** \n Clan trophies:42,422 Trophies, required trophies:4,300 \nOmega Jo Accademies: \nOmega™ Jo II | #92RL0R8U \nOmega™ Jo III | #998LVPY8', inline=False)
+    await client.say(embed=embed)
+
 
 client.run(TOKEN)
