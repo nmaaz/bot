@@ -52,7 +52,7 @@ async def clans():
     embed=discord.Embed(
     title='Omega eSports Clans', 
     description='First of all select the country you want to see the clans, to do so, use the following commands:', 
-    colour=discord:Colour.red()
+    colour=discord.Colour.red()
     )
     embed.add_field(text='```.international```', value='To see all the omega :earth_americas:clans', inline=False)
     await client.say(embed=embed)
