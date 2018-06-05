@@ -96,9 +96,9 @@ async def IT():
     description='Here are the Omega Italian Clans',
     colour=discord.Colour.green()
     )
-    embed.add_field(name='Omega IT Legends', value='Omega ITLegends clans info \nClan Tag: **#8GUJ9J8G**\nClan trophies:46,875 Trophies, required trophies:4,300 \n***Link to view clan in-game***:arrow_right:https://link.clashroyale.com/?clanInfo?id=8GUJ9J8G :arrow_left: ***To do this you should open this link in your browswer.*** \nOmega ITLegends Accademies:\nItalianLegends2 | #8GC2LR92\nItalianLegends3 | #VGPY9PP3\nItalianLegends4 | #VLY0PYY4\nItalianLegends5 | #PGR2LPL')
-    await client.say(embed=embed)
+    embed.add_field(name='Omega IT Legends', value='Omega ITLegends clans info \nClan Tag: **#8GUJ9J8G** \nClan trophies:46,875 Trophies, required trophies:4,300 \nOmega ITLegends Accademies:\nItalianLegends2 | #8GC2LR92\nItalianLegends3 | #VGPY9PP3\nItalianLegends4 | #VLY0PYY4\nItalianLegends5 | #PGR2LPL', inline=True)
+    embed.add_field(name='Omega ITC', value='Omega ITC clans info \n Clan Tag:***#90G8Y8GP*** \nClan Trophhies:44,550 Trophies, required trophies:4,300 \nOmega ITC Accademies:Omega ITC 2 | #8RUVQ99R \nIT Champions | #L9Q88 \n ITMiniChampions | #8YURV2J \nITMegaChampions | #UJUVYRR \n ITBatsChampions | #GCCGG00',inline=True)
     
+    
+
 client.run(TOKEN)
-    
-    
