@@ -68,18 +68,18 @@ async def cr():
     description='First of all select the country you want to see the clans, to do so, use the following commands:',
     colour=discord.Colour.purple()
     )
-    embed.add_field(name='```.int```', value='To see all the Omega International clans', inline=False)
-    embed.add_field(name='```.Italy```', value='To see all the Omega Italian clans', inline=False)
-    embed.add_field(name='```.Egypt```', value='To see all the Omega Egyptian Clans', inline=False)
-    embed.add_field(name='```.Jordan```', value='To see all the Omega Jordan Clans', inline=False)
-    embed.add_field(name='```.Greece```', value='To see all the omega Greek Clans', inline=False)
-    embed.add_field(name='```.India```', value='To see all the Omega Indian Clans', inline=False)
-    embed.add_field(name='```.Spain```', value='To see all the Omega Spanish Clans', inline=False)
-    embed.add_field(name='```.Latam```', value='To see all the Omega Latam Clans', inline=False)
+    embed.add_field(name='```.INT```', value='To see all the Omega International clans', inline=False)
+    embed.add_field(name='```.IT```', value='To see all the Omega Italian clans', inline=False)
+    embed.add_field(name='```.EG```', value='To see all the Omega Egyptian Clans', inline=False)
+    embed.add_field(name='```.JOR```', value='To see all the Omega Jordan Clans', inline=False)
+    embed.add_field(name='```.GR```', value='To see all the omega Greek Clans', inline=False)
+    embed.add_field(name='```.IND```', value='To see all the Omega Indian Clans', inline=False)
+    embed.add_field(name='```.ES```', value='To see all the Omega Spanish Clans', inline=False)
+    embed.add_field(name='```.MEX```', value='To see all the Omega Latam Clans', inline=False)
     await client.say(embed=embed)
 
 @client.command()
-async def int():
+async def INT():
     embed=discord.Embed(
     title='Omega eSports International Clans',
     description='Here are the Omega esports International Clans', 
@@ -88,7 +88,15 @@ async def int():
     embed.add_field(name='Omega eSports', value='Omega eSports is the main clan that is used for the competitions and Omega tournaments.', inline=False)
     embed.add_field(name='Omega Request', value='Omega Request is the main Omega Req and Leave clan \n clan tag:**8C9UG2QG**', inline=False)
     await client.say(embed=embed)
-    
-    
 
-client.run(TOKEN)
+@client.command()
+async def IT():
+    embed=discord.Embed(
+    title='Omega eSports Italian Clans',
+    description='Here are the Omega Italian Clans'
+    colour=discord.Colour.green()
+    )
+    embed.add_field(name='Omega IT Legends', value='Omega ITLegends clans indo \nClan Tag: **#8GUJ9J8G**\nClan trophies:46,875 Trophies, required trophies:4,300 \n***Link to view clan in-game***:arrow_right:https://link.clashroyale.com/?clanInfo?id=8GUJ9J8G :arrow_left: ***To do this you should open this link in your browswer.*** \nOmega ITLegends Accademies:\nItalianLegends2 | #8GC2LR92\nItalianLegends3 | #VGPY9PP3\nItalianLegends4 | #VLY0PYY4\nItalianLegends5 | #PGR2LPL')
+    await client.say(embed=embed)
+    
+    
