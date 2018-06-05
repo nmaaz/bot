@@ -18,17 +18,6 @@ async def ping():
     )
     await client.say(embed=embed)
 
-@client.command(pass_context=True)
-if ctx.message.author.server_permissions == manage_messages
-async def clear(ctx, amount=0):
-    channel = ctx.message.channel 
-    messages = []
-    async for message in client.logs_from(channel, limit=int(amount)):
-        messages.append(message)
-        
-    await client.delete_messages(messages)
-    await client.say(amount + 'Messages Deleted')
-
 
 @client.command()
 async def info():
@@ -56,6 +45,16 @@ async def staff():
     embed.add_field(name='Discord Manager', value='Maaz', inline=False)
 
     await client.say(embed=embed)
+
+
+@client.command()
+async def clans():
+    embed=discord.Embed(
+    title='Omega eSports Clans', 
+    description='First of all select the country you want to see the clans, to do so, use the following commands:', 
+    colour=discord:Colour.red()
+    )
+    embed.add_field(text='```.international```', value='To see all the omega :earth_americas:clans', inline=False)
     
 
 client.run(TOKEN)
