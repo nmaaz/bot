@@ -76,7 +76,7 @@ async def cr():
     embed.add_field(name='```.India```', value='To see all the Omega Indian Clans', inline=False)
     embed.add_field(name='```.Spain```', value='To see all the Omega Spanish Clans', inline=False)
     embed.add_field(name='```.Latam```', value='To see all the Omega Latam Clans', inline=False)
-    await client.send(embed=embed)
+    await client.say(embed=embed)
     
     
 
