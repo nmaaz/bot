@@ -54,21 +54,21 @@ async def clans():
     description='First of all please select the game you would like to see the clans', 
     colour=discord.Colour.red()
     )
-    embed.add_field(name='```.ClashRoyale```', value='To see all the omega Clash Royale Clans', inline=False)
-    embed.add_field(name='```.Fortnite ```', value='To see the Omega Fortnite Clans', inline=False)
-    embed.add_field(name='```.Brawl Stars```', value='To see the Omega Brawl stars Clans', inline=False)
-    embed.add_field(name='```.War Heroes```', value='to see the Omega War Heroes Clans', inline=False)
-    embed.add_field(name='```.Toon Blast```', value='To see all the Omega Toon Blast Clans', inline=False)
+    embed.add_field(name='```.cr```', value='To see all the omega Clash Royale Clans', inline=False)
+    embed.add_field(name='```.ftn ```', value='To see the Omega Fortnite Clans', inline=False)
+    embed.add_field(name='```.bs```', value='To see the Omega Brawl stars Clans', inline=False)
+    embed.add_field(name='```.wh```', value='to see the Omega War Heroes Clans', inline=False)
+    embed.add_field(name='```.tb```', value='To see all the Omega Toon Blast Clans', inline=False)
     await client.say(embed=embed)
 
 @client.command()
-async def ClashRoyale():
+async def cr():
     embed=discord.Embed(
     title='Omega eSports Clash Royale Clans', 
     description='First of all select the country you want to see the clans, to do so, use the following commands:',
     colour=discord.Colour.purple()
     )
-    embed.add_field(name='```.International```', value='To see all the Omega International clans', inline=False)
+    embed.add_field(name='```.int```', value='To see all the Omega International clans', inline=False)
     embed.add_field(name='```.Italy```', value='To see all the Omega Italian clans', inline=False)
     embed.add_field(name='```.Egypt```', value='To see all the Omega Egyptian Clans', inline=False)
     embed.add_field(name='```.Jordan```', value='To see all the Omega Jordan Clans', inline=False)
@@ -79,7 +79,7 @@ async def ClashRoyale():
     await client.send(embed=embed)
 
 @client.command()
-async def International():
+async def int():
     embed=discord.Embed(
     title='Omega eSports International Clans',
     description='Here are the Omega esports International Clans', 
