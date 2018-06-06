@@ -171,7 +171,7 @@ async def fortnite():
     embed.add_field(name='Omega fortnite', value='Members: \nOmega BeaMix \nOmega-Kirin0 \nOmega-WhiteSmoke \nOmega-Dragon19 \nOmega-Jack \nOmega-Justzako \nOmega Vava \nOmega Pikko1 \nOmega_Smart \nOmega-Jacopotto \nOmega-junder \nOmega_Giogio \nOmega Micene \nOmega-Princee \nOmega M4sk \nOmega-KingBosee \nOmega-Pusher \nOmega-Krybe \nOmega-Ovlasfire \nOmega-Cavity', inline=False)
     await client.say(embed=embed)
 @client.command()
-async def brawl stars():
+async def BrawlStars():
     embed=discord.Embed(
     title='Omega eSports Brawl Stars Clans',
     description='Here are the Omega Brawl Stars Clans',
@@ -180,7 +180,7 @@ async def brawl stars():
     embed.add_field(name='Omega eSports', value='Omega eSports clan info \nBand Tag:**#Q80UQRL** \nRequired Trophies:5500', inline=False)
     await client.say(embed=embed)
 @client.command()
-async def war heroes():
+async def WarHeroes():
     embed=discord.Embed(
     title='Omega eSports War Heroes Clans',
     description='Here are the Omega War Heroes Clans',
@@ -190,7 +190,7 @@ async def war heroes():
     await client.say(embed=embed)
 
 @client.command()
-async def toon blast():
+async def ToonBlast():
     embed=discord.Embed(
     title='Omega eSports Toon Blast Clans',
     description='Here are the Omega Toon Blast Clans',
