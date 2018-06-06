@@ -54,7 +54,7 @@ async def clans():
     description='First of all please select the game you would like to see the clans by using the following commands:',
     colour=discord.Colour.red()
     )
-    embed.set_footer(text='my prefix is `=`')
+    embed.set_footer(text='my prefix is =')
     embed.add_field(name='```=ClashRoyale```', value='To see all the omega Clash Royale Clans', inline=False)
     embed.add_field(name='```=Fortnite ```', value='To see the Omega Fortnite Clans', inline=False)
     embed.add_field(name='```=BrawlStars```', value='To see the Omega Brawl stars Clans', inline=False)
