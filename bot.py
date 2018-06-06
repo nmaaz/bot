@@ -54,32 +54,32 @@ async def clans():
     description='First of all please select the game you would like to see the clans',
     colour=discord.Colour.red()
     )
-    embed.add_field(name='```.cr```', value='To see all the omega Clash Royale Clans', inline=False)
-    embed.add_field(name='```.ftn ```', value='To see the Omega Fortnite Clans', inline=False)
-    embed.add_field(name='```.bs```', value='To see the Omega Brawl stars Clans', inline=False)
-    embed.add_field(name='```.wh```', value='to see the Omega War Heroes Clans', inline=False)
-    embed.add_field(name='```.tb```', value='To see all the Omega Toon Blast Clans', inline=False)
+    embed.add_field(name='```.clash royale```', value='To see all the omega Clash Royale Clans', inline=False)
+    embed.add_field(name='```.fortnite ```', value='To see the Omega Fortnite Clans', inline=False)
+    embed.add_field(name='```.brawl stars```', value='To see the Omega Brawl stars Clans', inline=False)
+    embed.add_field(name='```.war heroes```', value='to see the Omega War Heroes Clans', inline=False)
+    embed.add_field(name='```.toon blast```', value='To see all the Omega Toon Blast Clans', inline=False)
     await client.say(embed=embed)
 
 @client.command()
-async def cr():
+async def clash royale():
     embed=discord.Embed(
     title='Omega eSports Clash Royale Clans',
     description='First of all select the country you want to see the clans, to do so, use the following commands:',
     colour=discord.Colour.purple()
     )
-    embed.add_field(name='```.int```', value='To see all the Omega International clans', inline=False)
-    embed.add_field(name='```.it```', value='To see all the Omega Italian clans', inline=False)
-    embed.add_field(name='```.eg```', value='To see all the Omega Egyptian Clans', inline=False)
-    embed.add_field(name='```.jor```', value='To see all the Omega Jordan Clans', inline=False)
-    embed.add_field(name='```.gr```', value='To see all the omega Greek Clans', inline=False)
-    embed.add_field(name='```.ind```', value='To see all the Omega Indian Clans', inline=False)
-    embed.add_field(name='```.es```', value='To see all the Omega Spanish Clans', inline=False)
-    embed.add_field(name='```.mex```', value='To see all the Omega Latam Clans', inline=False)
+    embed.add_field(name='```.international```', value='To see all the Omega International clans', inline=False)
+    embed.add_field(name='```.italy```', value='To see all the Omega Italian clans', inline=False)
+    embed.add_field(name='```.egypt```', value='To see all the Omega Egyptian Clans', inline=False)
+    embed.add_field(name='```.jordan```', value='To see all the Omega Jordan Clans', inline=False)
+    embed.add_field(name='```.greece```', value='To see all the omega Greek Clans', inline=False)
+    embed.add_field(name='```.india```', value='To see all the Omega Indian Clans', inline=False)
+    embed.add_field(name='```.spain```', value='To see all the Omega Spanish Clans', inline=False)
+    embed.add_field(name='```.mexico```', value='To see all the Omega Latam Clans', inline=False)
     await client.say(embed=embed)
 
 @client.command()
-async def int():
+async def international():
     embed=discord.Embed(
     title='Omega eSports International Clans',
     description='Here are the Omega esports International Clans',
@@ -90,7 +90,7 @@ async def int():
     await client.say(embed=embed)
 
 @client.command()
-async def it():
+async def italy():
     embed=discord.Embed(
     title='Omega eSports Italian Clans',
     description='Here are the Omega Italian Clans',
@@ -106,7 +106,7 @@ async def it():
     await client.say(embed=embed)
 
 @client.command()
-async def eg():
+async def egypt():
     embed=discord.Embed(
     title='Omega eSports Egyptian clans',
     description='Here are the Omega Egyptian Clans',
@@ -116,7 +116,7 @@ async def eg():
     await client.say(embed=embed)
 
 @client.command()
-async def jor():
+async def jordan():
     embed=discord.Embed(
     title='Omega eSports Jordan Clans',
     description='Here ere the Omega Jordan Clans',
@@ -125,7 +125,7 @@ async def jor():
     embed.add_field(name='Omega Jo', value='Omega Jo Clans info \nclan Tag:**#9GQJ2G0G** \nClan trophies:42,422 Trophies, required trophies:4,300 \nOmega Jo Accademies: \nOmega™ Jo II | #92RL0R8U \nOmega™ Jo III | #998LVPY8', inline=False)
     await client.say(embed=embed)
 @client.command()
-async def gr():
+async def greece():
     embed=discord.Embed(
     title='Omega esports Greek Clans',
     description='Here are the Omega Greek clans',
@@ -134,7 +134,7 @@ async def gr():
     embed.add_field(name='Omega Hellas', value='Omega Hellas clans info \nClan tag:**#9PR0Y2L9**\nClan trophies:44,165 Trophies, required trophies:4,300 \nOmega Hellas Accademies: \nOmega™ Hellas2 | #PGVJJY8', inline=False)
     await client.say(embed=embed)
 @client.command()
-async def ind():
+async def india():
     embed=discord.Embed(
     title='Omega eSports Indian Clans',
     description='here are the Omega India Clans',
@@ -152,7 +152,7 @@ async def mex():
     embed.add_field(name='Omega Latam', value='Omega Latam Clans info \nClan Tag:**#9Y0PLURU** \n Clan trophies:46,472 Trophies, required trophies:4,300 \nOmega Latam Accademies: \n Omega™ Masters | #9Y8Q0QVY', inline=False)
     await client.say(embed=embed)
 @client.command()
-async def es():
+async def spain():
     embed=discord.Embed(
     title='Omega eSports Spanish Clans',
     description='Here are the Omega Spanish Clans',
@@ -162,7 +162,7 @@ async def es():
     await client.say(embed=embed)
 
 @client.command()
-async def ftn():
+async def fortnite():
     embed=discord.Embed(
     title='Omega eSports Fortnite Clans',
     description='Here are the Omega Fortnite Clans',
@@ -171,7 +171,7 @@ async def ftn():
     embed.add_field(name='Omega fortnite', value='Members: \nOmega BeaMix \nOmega-Kirin0 \nOmega-WhiteSmoke \nOmega-Dragon19 \nOmega-Jack \nOmega-Justzako \nOmega Vava \nOmega Pikko1 \nOmega_Smart \nOmega-Jacopotto \nOmega-junder \nOmega_Giogio \nOmega Micene \nOmega-Princee \nOmega M4sk \nOmega-KingBosee \nOmega-Pusher \nOmega-Krybe \nOmega-Ovlasfire \nOmega-Cavity', inline=False)
     await client.say(embed=embed)
 @client.command()
-async def bs():
+async def brawl stars():
     embed=discord.Embed(
     title='Omega eSports Brawl Stars Clans',
     description='Here are the Omega Brawl Stars Clans',
@@ -180,7 +180,7 @@ async def bs():
     embed.add_field(name='Omega eSports', value='Omega eSports clan info \nBand Tag:**#Q80UQRL** \nRequired Trophies:5500', inline=False)
     await client.say(embed=embed)
 @client.command()
-async def wh():
+async def war heroes():
     embed=discord.Embed(
     title='Omega eSports War Heroes Clans',
     description='Here are the Omega War Heroes Clans',
@@ -190,7 +190,7 @@ async def wh():
     await client.say(embed=embed)
 
 @client.command()
-async def tb():
+async def toon blast():
     embed=discord.Embed(
     title='Omega eSports Toon Blast Clans',
     description='Here are the Omega Toon Blast Clans',
