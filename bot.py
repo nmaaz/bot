@@ -19,9 +19,9 @@ async def ping(aliases= "Ping"):
     await client.say(embed=embed)
 
 
-@client.command()
+@client.command(aliases["Info", "INFO"])
 async def info():
-    await client.say('**This bot is developed by Maaz#2031 , for any suggestion or problem DM \nBot language:Python** \n **prefix**=`.`')
+    await client.say('**This bot is developed by Maaz#2031 , for any suggestion or problem DM \nBot language:Python** \n **prefix**=`=`')
 
 @client.command()
 async def staff():
