@@ -10,7 +10,7 @@ async def on_ready():
     print("bot is ready")
 
 @client.command()
-async def ping():
+async def ping(aliases= "Ping"):
     embed=discord.Embed(
     title='Ping!',
     description='**Pong** :ping_pong:',
