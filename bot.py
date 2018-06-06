@@ -62,7 +62,7 @@ async def clans():
     await client.say(embed=embed)
 
 @client.command()
-async def clash royale():
+async def ClashRoyale():
     embed=discord.Embed(
     title='Omega eSports Clash Royale Clans',
     description='First of all select the country you want to see the clans, to do so, use the following commands:',
