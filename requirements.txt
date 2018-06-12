@@ -10,7 +10,7 @@ pipenv==2018.5.18
 virtualenv==16.0.0
 virtualenv-clone==0.3.0
 websockets==3.4
-FFmpeg==4.0
 youtube-dl==2018.06.11
+
 
 
