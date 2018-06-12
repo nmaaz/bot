@@ -200,7 +200,7 @@ async def ToonBlast():
     embed.add_field(name='Omega eSports', value='required Level:350')
     await client.say(embed=embed)
 @client.command(pass_context=True)
-async def clear(ctx, amount=0):
+async def clear6593937(ctx, amount=0):
     channel = ctx.message.channel
     messages=[]
     async for message in client.logs_from(channel, limit=int(amount)):
