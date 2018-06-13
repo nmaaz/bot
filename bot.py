@@ -206,11 +206,7 @@ async def clear(ctx, amount=0):
         messages = []
         async for message in client.logs_from(channel , limit= int(amount)):
             messages.append(message)
-            em=discord.Embed(
-            title='Messages Deleted', 
-            description=str(amount) + 'Deleted Successfully'),
-            colour=discord.Colour.green()
-            )
+           
         await client.delete_messages(messages)
         await client.say(str(amount) + '`Messages Deleted`' )
           
