@@ -9,7 +9,7 @@ async def on_ready():
 	await client.change_presence(game=discord.Game(name='www.omegaesports.net'))
 	print('Bot is Online')
 	print('-------------------')
-TOKEN= os.environ.get('TOKEN')
+
 
 #basic commands
 @client.command(alises=["PING", "Ping"])
@@ -293,4 +293,4 @@ async def ToonBlast():
 
 
 
-client.run('TOKEN')
+client.run(os.environ.get('TOKEN'))
