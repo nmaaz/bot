@@ -208,8 +208,9 @@ async def clear(ctx, amount=0):
             messages.append(message)
         await client.delete_messages(messages)
         await client.say(str(amount) + '**messages deleted**')
-    elif 
-    await client.say('hmmm i don't think you can use that :thinking: ')
+    elif:
+        await client.say('hmmm i don't think you can use that :thinking: ')
+
 
 
 
