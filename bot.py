@@ -1,28 +1,112 @@
 import discord
-from discord.ext import commands
+from discord.ext import commands 
 import os
 
-TOKEN = os.environ.get('TOKEN')
-client = commands.Bot(command_prefix = '=')
-
+client = commands.Bot(command_prefix= '>')
+#events
 @client.event
 async def on_ready():
-    print("bot is ready")
+	await client.change_presence(game=discord.Game(name='www.omegaesports.net'))
+	print('Bot is Online')
+	print('-------------------')
+TOKEN= os.environ.get('TOKEN')
 
-@client.command(aliases=["PING", "Ping"])
+#basic commands
+@client.command(alises=["PING", "Ping"])
 async def ping():
-    embed=discord.Embed(
-    title='Ping!',
-    description='**Pong** :ping_pong:',
-    colour=discord.Colour.blue()
-    )
-    await client.say(embed=embed)
-
-
-@client.command(aliases=["Info", "INFO"])
+	embed=discord.Embed(
+	title='Ping!',
+	description='did you **Ping**? i say **PONG** :ping_pong: ',
+	colour=discord.Colour.green()		
+	)
+	await client.say(embed=embed)
+@client.command(pass_context=True)
+async def say(ctx, *, echo):
+	if ctx.message.author.server_permissions.administrator:
+		await client.delete_message(ctx.message)
+		await client.say(echo)
+	else:
+		embed=discord.Embed(
+		title='Permission Denied',
+		description='Only an administrator can make me say something',
+		colour=discord.Colour.red()	
+		)
+		await client.say(embed=embed)
+#info command 
+@client.command()
 async def info():
-    await client.say('**This bot is developed by Maaz#2031 , for any suggestion or problem DM \nBot language:Python** \n **prefix**=`=`')
+	embed=discord.Embed(
+	title='Bot info', 
+	description='This bot is developed by <@375365255448231937> (maaz#2031), for any info or suggestion feel free to DM me',
+	colour=discord.Colour.blue()
+	)
+	await client.say(embed=embed)
+#moderation commands
+#clear command
+@client.command(pass_context=True)
+async def clear(ctx, amount=0):
+    if ctx.message.author.server_permissions.manage_messages:
+        channel = ctx.message.channel
+        messages = []
+        async for message in client.logs_from(channel , limit= int(amount)):
+    
+            messages.append(message)
+           
+        await client.delete_messages(messages)
+        await client.say(str(amount) + '`Messages Deleted`' )
+  
 
+     	
+     	
+      
+#kick command
+@client.command(pass_context=True)
+async def kick(ctx, userName : discord.User):
+	if ctx.message.author.server_permissions.kick_members:
+		await client.kick(userName)
+		await client.say('__**Succesfully kicked user**__')
+	else:
+		embed=discord.Embed(
+		title='Permission Denied',
+		description='You do not have the permission to kick someone :x: ', 
+		colour=discord.Colour.red()
+		)
+		await client.say(embed=embed)
+#ban command
+@client.command(pass_context=True)
+async def ban(ctx, member : discord.Member, days: int = 1 ):
+	if ctx.message.author.server_permissions.ban_members:
+		await client.ban(member, days)
+		await client.say('succesfully banned member')
+	else:
+		embed=discord.Embed(
+		title='Permission denied', 
+		description='You do not have the permission to ban someone :x: ',
+		colour=discord.Colour.red()				
+		)
+		await client.say(embed=embed)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#staff command
 @client.command(aliases=["STAFF", "Staff"])
 async def staff():
     embed = discord.Embed(
@@ -45,8 +129,8 @@ async def staff():
     embed.add_field(name='Discord Manager', value='Maaz', inline=False)
 
     await client.say(embed=embed)
-
-
+#clans command
+#main command
 @client.command(aliases=["Clans", "CLANS"])
 async def clans():
     embed=discord.Embed(
@@ -54,14 +138,14 @@ async def clans():
     description='First of all please select the game you would like to see the clans by using the following commands:',
     colour=discord.Colour.red()
     )
-    embed.set_footer(text='my prefix is =')
-    embed.add_field(name='```=ClashRoyale```', value='To see all the omega Clash Royale Clans', inline=False)
-    embed.add_field(name='```=Fortnite ```', value='To see the Omega Fortnite Clans', inline=False)
-    embed.add_field(name='```=BrawlStars```', value='To see the Omega Brawl stars Clans', inline=False)
-    embed.add_field(name='```=WarHeroes```', value='to see the Omega War Heroes Clans', inline=False)
-    embed.add_field(name='```=ToonBlast```', value='To see all the Omega Toon Blast Clans', inline=False)
+    embed.set_footer(text='my prefix is >')
+    embed.add_field(name='```>ClashRoyale```', value='To see all the omega Clash Royale Clans', inline=False)
+    embed.add_field(name='```>Fortnite ```', value='To see the Omega Fortnite Clans', inline=False)
+    embed.add_field(name='```>BrawlStars```', value='To see the Omega Brawl stars Clans', inline=False)
+    embed.add_field(name='```>WarHeroes```', value='to see the Omega War Heroes Clans', inline=False)
+    embed.add_field(name='```>ToonBlast```', value='To see all the Omega Toon Blast Clans', inline=False)
     await client.say(embed=embed)
-
+#clash royale
 @client.command(aliases=["CLASHROYALE","clashroyale"])
 async def ClashRoyale():
     embed=discord.Embed(
@@ -69,16 +153,16 @@ async def ClashRoyale():
     description='First of all select the country you want to see the clans, to do so, use the following commands:',
     colour=discord.Colour.purple()
     )
-    embed.add_field(name='```=International```', value='To see all the Omega International clans', inline=False)
-    embed.add_field(name='```=Italy```', value='To see all the Omega Italian clans', inline=False)
-    embed.add_field(name='```=Egypt```', value='To see all the Omega Egyptian Clans', inline=False)
-    embed.add_field(name='```=Jordan```', value='To see all the Omega Jordan Clans', inline=False)
-    embed.add_field(name='```=Greece```', value='To see all the omega Greek Clans', inline=False)
-    embed.add_field(name='```=India```', value='To see all the Omega Indian Clans', inline=False)
-    embed.add_field(name='```=Spain```', value='To see all the Omega Spanish Clans', inline=False)
-    embed.add_field(name='```=Mexico```', value='To see all the Omega Latam Clans', inline=False)
+    embed.add_field(name='```>International```', value='To see all the Omega International clans', inline=False)
+    embed.add_field(name='```>Italy```', value='To see all the Omega Italian clans', inline=False)
+    embed.add_field(name='```>Egypt```', value='To see all the Omega Egyptian Clans', inline=False)
+    embed.add_field(name='```>Jordan```', value='To see all the Omega Jordan Clans', inline=False)
+    embed.add_field(name='```>Greece```', value='To see all the omega Greek Clans', inline=False)
+    embed.add_field(name='```>India```', value='To see all the Omega Indian Clans', inline=False)
+    embed.add_field(name='```>Spain```', value='To see all the Omega Spanish Clans', inline=False)
+    embed.add_field(name='```>Mexico```', value='To see all the Omega Latam Clans', inline=False)
     await client.say(embed=embed)
-
+#CR INT
 @client.command(aliases=["INTERNATIONAL","international"])
 async def International():
     embed=discord.Embed(
@@ -89,7 +173,7 @@ async def International():
     embed.add_field(name='Omega eSports', value='Omega eSports is the main clan that is used for the competitions and Omega tournaments.', inline=False)
     embed.add_field(name='Omega Request', value='Omega Request is the main Omega Req and Leave clan \n clan tag:**8C9UG2QG**', inline=False)
     await client.say(embed=embed)
-
+#CR IT
 @client.command(aliases=["ITALY", "italy"])
 async def Italy():
     embed=discord.Embed(
@@ -105,7 +189,7 @@ async def Italy():
     embed.add_field(name='Omega Fighters', value='Omega Fighters Clans Info \nClan Tag:**#8Q2JV0QV** \n Clan trophies:45,238 Trophies, required trophies:4,300 \nOmega Fighters Accademies:Omega Fighters1 | #8R9GO9Q9 \nOmega Fighters2 | #8QV98G8J', inline=False)
     embed.add_field(name='Omega Insane', value='Omega Insane Clans info \nClan Tag:**#8VUU8RLJ** \n Clan trophies:44,185 Trophies, required trophies:4,300 \nOmega Insane Accademies: \nOmega Insane 2 | #9L9UQJ2U', inline=False)
     await client.say(embed=embed)
-
+#CR EG
 @client.command(aliases=["EGYPT", "egypt"])
 async def Egypt():
     embed=discord.Embed(
@@ -115,7 +199,7 @@ async def Egypt():
     )
     embed.add_field(name='Egypt Omega', value='Egypt Omega Clans info \nClan Tag:**#8ULC0LR2** \n Clan trophies: 45,713 Trophies , required trophies:4,300 \nEgypt Omega Accademies: \nEgypt Omega 1 (4600) \nEgypt Omega 2 (4300) \nEgypt Omega 3 (4000) \nEgypt Omega 4 (3800) \nEgypt Omega 5 (3600) \nEgypt Omega 6 (3400) \nEgypt Omega 7 (3200)', inline=False)
     await client.say(embed=embed)
-
+#CR JOR
 @client.command(aliases=["jordan", "JORDAN"])
 async def Jordan():
     embed=discord.Embed(
@@ -125,6 +209,7 @@ async def Jordan():
     )
     embed.add_field(name='Omega Jo', value='Omega Jo Clans info \nclan Tag:**#9GQJ2G0G** \nClan trophies:42,422 Trophies, required trophies:4,300 \nOmega Jo Accademies: \nOmega™ Jo II | #92RL0R8U \nOmega™ Jo III | #998LVPY8', inline=False)
     await client.say(embed=embed)
+#CR GR    
 @client.command(aliases=["GREECE", "greece"])
 async def Greece():
     embed=discord.Embed(
@@ -134,6 +219,7 @@ async def Greece():
     )
     embed.add_field(name='Omega Hellas', value='Omega Hellas clans info \nClan tag:**#9PR0Y2L9**\nClan trophies:44,165 Trophies, required trophies:4,300 \nOmega Hellas Accademies: \nOmega™ Hellas2 | #PGVJJY8', inline=False)
     await client.say(embed=embed)
+ #CR IND
 @client.command(aliases=["INDIA", "india"])
 async def India():
     embed=discord.Embed(
@@ -143,6 +229,7 @@ async def India():
     )
     embed.add_field(name='Omega India', value='Omega India Clans info \nClan Tag:**#9YPPJVQU** \nClan trophies:45,279 Trophies, required trophies:4,300 \nOmega India Accademies: \nOmega™ India ♥️ | #9PYGCJ28 \nOmega™ India ♠️ | #9P80G9VY \nOmega™ India ♦️ | #P8PU098P \nOmega™ India ♣️ | #9U00UV28 \nOmega™ IND FuZe | #P8LV082', inline=False)
     await client.say(embed=embed)
+#CR LATAM
 @client.command(aliases=["mexico", "MEXICO"])
 async def Mexico():
     embed=discord.Embed(
@@ -152,6 +239,7 @@ async def Mexico():
     )
     embed.add_field(name='Omega Latam', value='Omega Latam Clans info \nClan Tag:**#9Y0PLURU** \n Clan trophies:46,472 Trophies, required trophies:4,300 \nOmega Latam Accademies: \n Omega™ Masters | #9Y8Q0QVY', inline=False)
     await client.say(embed=embed)
+ #CR SPAIN
 @client.command(aliases=["SPAIN", "spain"])
 async def Spain():
     embed=discord.Embed(
@@ -161,7 +249,7 @@ async def Spain():
     )
     embed.add_field(name='Omega GSD Spain', value='Omega GSD Spain Clans info \nClan tag:**#9P82PUCU** \nClan trophies:44,494 Trophies, required trophies: 4,300 \nOmega GSD Spain Accademies: \nOmega GSD Spn 1 | #P8QCC8GO \nOmega GSD Spn 2 | #9L89YQ9Q \nOmega GSD Spn 3 | #P8QYGRJG \nOmega GSD Spn 4 | #9UOCQCRY', inline=False)
     await client.say(embed=embed)
-
+#FORTNITE
 @client.command(aliases=["FORTNITE", "fortnite"])
 async def Fortnite():
     embed=discord.Embed(
@@ -171,6 +259,7 @@ async def Fortnite():
     )
     embed.add_field(name='Omega fortnite', value='Members: \nOmega BeaMix \nOmega-Kirin0 \nOmega-WhiteSmoke \nOmega-Dragon19 \nOmega-Jack \nOmega-Justzako \nOmega Vava \nOmega Pikko1 \nOmega_Smart \nOmega-Jacopotto \nOmega-junder \nOmega_Giogio \nOmega Micene \nOmega-Princee \nOmega M4sk \nOmega-KingBosee \nOmega-Pusher \nOmega-Krybe \nOmega-Ovlasfire \nOmega-Cavity', inline=False)
     await client.say(embed=embed)
+#BRAWLSTARS
 @client.command(aliases=["BRAWLSTARS", "brawlstars"])
 async def BrawlStars():
     embed=discord.Embed(
@@ -180,6 +269,7 @@ async def BrawlStars():
     )
     embed.add_field(name='Omega eSports', value='Omega eSports clan info \nBand Tag:**#Q80UQRL** \nRequired Trophies:5500', inline=False)
     await client.say(embed=embed)
+#WAR HEROES
 @client.command(aliases=["WARHEROES", "warheroes"])
 async def WarHeroes():
     embed=discord.Embed(
@@ -189,7 +279,7 @@ async def WarHeroes():
     )
     embed.add_field(name='Omega Heroes', value='Omega Heroes Clan info \n Clan Medals:36.000, required medals:3500 \nOmega Heroes Accademies:\n ★ITA HEROES★ \n★ITA HEROES 2★ \n★ITA HEROES 2★',inline=False)
     await client.say(embed=embed)
-
+#TOON BLAST
 @client.command(aliases=["TOONBLAST", "toonblast"])
 async def ToonBlast():
     embed=discord.Embed(
@@ -199,27 +289,8 @@ async def ToonBlast():
     )
     embed.add_field(name='Omega eSports', value='required Level:350')
     await client.say(embed=embed)
-@client.command(pass_context=True)
-async def clear(ctx, amount=0):
-    if ctx.message.author.server_permissions.manage_messages:
-        channel = ctx.message.channel
-        messages = []
-        async for message in client.logs_from(channel , limit= int(amount)):
-            messages.append(message)
-           
-        await client.delete_messages(messages)
-        await client.say(str(amount) + '`Messages Deleted`' )
-          
-  
-        
-        
-    else:
-        await client.say('you do not have the permission to use that :x:' )
 
 
 
 
-    
-    
-
-client.run(TOKEN)
+client.run('TOKEN')
