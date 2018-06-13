@@ -209,7 +209,7 @@ async def clear(ctx, amount=0):
         await client.delete_messages(messages)
         await client.say(str(amount) + '**messages deleted**')
     else:
-        await client.say('hmmm i don't think you can use that :thinking: ')
+        await client.say('you do not have the permission to use that :x:' )
 
 
 
