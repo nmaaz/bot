@@ -212,7 +212,7 @@ async def clear(ctx, amount=0):
             colour=discord.Colour.green()
             )
         await client.delete_messages(messages)
-        await client.say(embed=em)
+            await client.say(embed=em)
           
   
         
