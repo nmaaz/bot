@@ -201,11 +201,17 @@ async def ToonBlast():
     await client.say(embed=embed)
 @client.command(pass_context=True)
 async def clear6593937(ctx, amount=0):
-    channel = ctx.message.channel
-    messages=[]
-    async for message in client.logs_from(channel, limit=int(amount)):
-        messages.append(message)
-    await client.delete_messages(messages)
+    if ctx.message.author.server_permission.manage_messages:
+        channel = ctx.message.channel
+        messages = []
+        async for message in client.logs_from(channel , limit= int(amount)):
+            messages.append(message)
+        await client.delete_messages(messages)
+
+
+
+
+
     
     
 
