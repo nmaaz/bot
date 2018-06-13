@@ -16,7 +16,7 @@ async def on_ready():
 async def ping():
 	embed=discord.Embed(
 	title='Ping!',
-	description='did you **Ping**? i say **PONG** :ping_pong: ',
+	description='did you say **Ping**? i say **PONG** :ping_pong: ',
 	colour=discord.Colour.green()		
 	)
 	await client.say(embed=embed)
