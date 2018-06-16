@@ -59,8 +59,11 @@ async def clear(ctx, amount=0):
            
         await client.delete_messages(messages)
         await client.say(str(amount) + '`Messages Deleted`' )
-  
-
+@client.command()
+async def invite():
+	await client.say('This is invite link for the server: discord.gg/YYAV63W')
+		
+	
      	
      	
       
