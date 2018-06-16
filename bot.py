@@ -9,6 +9,11 @@ async def on_ready():
 	await client.change_presence(game=discord.Game(name='www.omegaesports.net'))
 	print('Bot is Online')
 	print('-------------------')
+@client.event
+async def on_member_join(member):
+	if member.server.id=="445850295516266496":
+		msg= member.mention+'Welcome to the **Omega Arkham League**, :tada: :hugging: ! if you are captain of a team you can sign up with the form that you can find in <#445864769946255360>, after you have signed up your team please contact an ADMIN through <@445913356017074178> so that we can assign you roles, if you want your server to be added in<#445861993153298433>, or you want to post your tryouts info in <#445862055996817418> Contacts us through the bot and we will help you as soon as possible , if you want you can join even our main server **LINK**: discord.gg/omegaesports'
+		await client.send_message(client.get_channel("445851457233616909"), msg)
 
 
 #basic commands
