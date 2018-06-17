@@ -37,6 +37,14 @@ async def say(ctx, *, echo):
 		colour=discord.Colour.red()	
 		)
 		await client.say(embed=embed)
+@client.command()
+async def invite():
+	embed=discord.Embed(
+	title='Server invite link', 
+	description='To open the invite link click [here](https://discord.gg/YYAV63W)',
+	colour=discord.Colour.green()		
+	)
+	await client.say(embed=embed)	
 #info command 
 @client.command()
 async def info():
