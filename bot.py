@@ -62,6 +62,19 @@ async def unmute(ctx, member : discord.Member):
 		
 		)
 		await client.say(embed=embed)
+		
+@client.command(pass_context=True)
+async def kick(ctx, userName : discord.User):
+	if ctx.message.author.server_permissions.kick_members:
+		await client.kick(userName)
+		await client.say('**Succesfully kicked user**')
+	else:
+		embed=discord.Embed(
+		title='Permission Denied',
+		description='You do not have the permission to kick someone :x: ', 
+		colour=discord.Colour.red()
+		)
+		await client.say(embed=embed)
 	
 
 
