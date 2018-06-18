@@ -113,7 +113,23 @@ async def say(ctx, *, echo):
 		colour=discord.Colour.red()	
 		)
 		await client.say(embed=embed)
-
+		
+		
+@client.command(pass_context=True)
+async def announce(ctx, *, msg):
+	if ctx.message.author.server_permissions.administrator:
+		
+		await client.say('@everyone '+msg)
+		await client.delete_message(ctx.message)
+	else:
+		embed=discord.Embed(
+		title='Permission Denied',
+		description='You do not have the permission :x: ',
+		colour=discord.Colour.red()
+		
+		
+		)
+		await client.say(embed=embed)
 	
 
 
