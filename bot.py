@@ -85,7 +85,7 @@ async def help():
 	colour=discord.Colour.blue()		
 	)
 	embed.add_field(name='Pubblic commands', value='`.help`-Shows this message\n`.invite`-Link to join the server\n`.dminvite`-Sends a DM with the link to join this server')
-	embed.add_field(name='Admin commands', value='`.mute <@user> (Ex. .mute @maaz#2031)`-Mutes a user in the server \n`.unmute <@user> (Ex. .unmute @maaz#2031)`-Unmutes a user in the server \n`.kick <@user> (Ex. .kick @maaz#2031)`-Kicks a user from the server \n`.ban <@user> (Ex. .ban @maaz#2031)`-Bans a user from the server \n`.unban`-This command is currently disabled , you can unban someome by going in the server settings>bans>user>unban', inline=False)
+	embed.add_field(name='Admin commands', value='`.mute <@user> (Ex. .mute @maaz#2031)`-Mutes a user in the server \n`.unmute <@user> (Ex. .unmute @maaz#2031)`-Unmutes a user in the server \n`.kick <@user> (Ex. .kick @maaz#2031)`-Kicks a user from the server \n`.ban <@user> (Ex. .ban @maaz#2031)`-Bans a user from the server \n`.unban`-This command is currently disabled , you can unban someome by going in the server settings>bans>user>unban \n`.say <message> (Ex. .say Hello | output: Hello)`-Repeats what you say \n`.announce <message> (Ex. .announce Hello | output: @everyone Hello`-Repeats what you say with the`@everyone` behind the message', inline=False)
 	await client.say(embed=embed)
 	
 @client.command(pass_context=True)
