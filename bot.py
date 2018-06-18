@@ -15,4 +15,27 @@ async def on_member_join(member):
 @client.command()
 async def ping():
 	await client.say('Pong! :ping_pong:')
+
+	
+@client.command()
+async def invite():
+	embed=discord.Embed(
+	title='Modern Gaming server invite link',
+	colour=discord.Colour.green()	
+	)
+	embed.add_field(name='Open the invite link', value='To open the invite link click [here](https://discord.gg/ZsmVZxq)', inline=False)
+	embed.add_field(name='Copy the invite link', value='To copy the invite link you can use the following command`.dminvite`')
+	await client.say(embed=embed)
+
+@client.command(pass_context=True)
+async def dminvite(ctx):
+	author=ctx.message.author
+	inv='https://discord.gg/ZsmVZxq'
+	await client.send_message(author, inv)
+	await client.say('Invite link sent in DM ')
+	
+
+
+	
+	
 client.run(os.environ.get('TOKEN'))
