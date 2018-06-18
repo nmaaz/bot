@@ -88,6 +88,33 @@ async def help():
 	embed.add_field(name='Admin commands', value='`.mute <@user> (Ex. .mute @maaz#2031)`-Mutes a user in the server \n`.unmute <@user> (Ex. .unmute @maaz#2031)`-Unmutes a user in the server \n`.kick <@user> (Ex. .kick @maaz#2031)`-Kicks a user from the server \n`.ban <@user> (Ex. .ban @maaz#2031)`-Bans a user from the server \n`.unban`-This command is currently disabled , you can unban someome by going in the server settings>bans>user>unban', inline=False)
 	await client.say(embed=embed)
 	
+@client.command(pass_context=True)
+async def ban(ctx, member : discord.Member, days: int = 1 ):
+	if ctx.message.author.server_permissions.ban_members:
+		await client.ban(member, days)
+		await client.say('**succesfully banned member**')
+	else:
+		embed=discord.Embed(
+		title='Permission denied', 
+		description='You do not have the permission  :x: ',
+		colour=discord.Colour.red()				
+		)
+		await client.say(embed=embed)
+		
+@client.command(pass_context=True)
+async def say(ctx, *, echo):
+	if ctx.message.author.server_permissions.administrator:
+		await client.delete_message(ctx.message)
+		await client.say(echo)
+	else:
+		embed=discord.Embed(
+		title='Permission Denied',
+		description='You do not have the permission :x: ',
+		colour=discord.Colour.red()	
+		)
+		await client.say(embed=embed)
+
+	
 
 
 	
