@@ -34,6 +34,35 @@ async def dminvite(ctx):
 	await client.send_message(author, inv)
 	await client.say('Invite link sent in DM ')
 	
+@client.command(pass_context=True)
+async def mute(ctx, member : discord.Member):
+	if ctx.message.author.server_permissions.administrator:
+		role = discord.utils.get(member.server.roles, name='Muted')
+		await client.add_roles(member, role)
+		await client.say('**Succesfully Muted user**')
+	else:
+		embed=discord.Embed(
+		title='Permission Denied',
+		description='You do not have the permission to mute :x: ',
+		colour=discord.Colour.red()
+		)
+		await client.say(embed=embed)
+		
+@client.command(pass_context=True)
+async def unmute(ctx, member : discord.Member):
+	if ctx.message.author.server_permissions.administrator:
+		role= discord.utils.get(member.server.roles, name='Muted')
+		await client.remove_roles(member, role)
+		await client.say('**Successfully unmuted user**')
+	else:
+		embed=discord.Embed(
+		title='Permission Denied',
+		description='You do not have the permission to unmute :x: ',
+		colour=discord.Colour.red()
+		
+		)
+		await client.say(embed=embed)
+	
 
 
 	
