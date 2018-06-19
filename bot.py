@@ -134,6 +134,10 @@ async def announce(ctx, *, msg):
 async def modern():
 	await client.say('Noob')
 	
+@client.command()
+async def diego():
+	await client.say('gayyyyyy')
+	
 	
 	
 	
