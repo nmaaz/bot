@@ -130,6 +130,12 @@ async def announce(ctx, *, msg):
 		
 		)
 		await client.say(embed=embed)
+@client.command()
+async def modern():
+	await client.say('Noob')
+	
+	
+	
 	
 
 
