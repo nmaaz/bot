@@ -138,6 +138,10 @@ async def modern():
 async def diego():
 	await client.say('gayyyyyy')
 	
+@client.command()
+async def düster():
+	await client.say('german pro player')
+	
 	
 	
 	
