@@ -142,6 +142,12 @@ async def diego():
 async def düster():
 	await client.say('german pro player')
 	
+@client.command(pass_context=True)
+async def status(ctx, *, status):
+	if ctx.message.author.id == '375365255448231937':
+		await client.change_presence(game=discord.Game(name=status))
+	else:
+		await client.say('Hahah Noob, you cannnot command me :new_moon_with_face:  ')	
 	
 	
 	
