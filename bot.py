@@ -147,7 +147,10 @@ async def status(ctx, *, status):
 	if ctx.message.author.id == '375365255448231937':
 		await client.change_presence(game=discord.Game(name=status))
 		await client.say('Status changes to: '+status)
-		
+		@client.command(pass_context=True)
+async def bot(ctx, *, text):
+	list = ['Yes', 'No', 'Maybe']
+	await client.say(random.choice(list))
 	else:
 		await client.say('Hahah Noob, you cannnot command me :new_moon_with_face:  ')
 	
