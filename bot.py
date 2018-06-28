@@ -154,4 +154,5 @@ async def status(ctx, *, status):
 async def bot(ctx, *, text):
 	list = ['Yes', 'No', 'Maybe']
 	await client.say(random.choice(list))
- client.(os.environ.get('TOKEN'))
+ 
+client.run(os.environ.get('TOKEN'))
